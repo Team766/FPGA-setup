@@ -1,0 +1,12 @@
+[Unit]
+Description=FPGA Startup
+After=network-online.target network.target
+
+[Service]
+Type=oneshot
+ExecStart=/onboot.sh
+StandardOutput=journal
+
+[Install]
+WantedBy=multi-user.target
+WantedBy=graphical.target
